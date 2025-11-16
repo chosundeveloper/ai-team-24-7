@@ -13,13 +13,40 @@
 
 ## 📦 설치 및 실행
 
-### 1. 필수 패키지 설치
+### 1. 저장소 클론
 
 ```bash
-pip install requests
+git clone https://github.com/chosundeveloper/ai-team-24-7.git
+cd ai-team-24-7
 ```
 
-### 2. 실행
+### 2. 가상 환경 생성 및 패키지 설치
+
+```bash
+# 가상 환경 생성
+python3 -m venv venv
+
+# 가상 환경 활성화
+source venv/bin/activate  # macOS/Linux
+# 또는
+venv\Scripts\activate  # Windows
+
+# 패키지 설치
+pip install -r requirements.txt
+```
+
+### 3. API 키 설정
+
+```bash
+# .env 파일 생성
+cp .env.example .env
+
+# .env 파일 편집하여 실제 API 키 입력
+# GROK_API_KEY=your_actual_grok_key
+# MISTRAL_API_KEY=your_actual_mistral_key
+```
+
+### 4. 실행
 
 ```bash
 python3 ai_team.py
